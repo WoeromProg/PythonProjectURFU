@@ -2,12 +2,165 @@
 
 
 
-{% block title %}
-Страница о нас
+{% block content %}
+    <h1 class="center">Востребованность</h1>
 {% endblock %}
 
-{% block content %}
-<h1>О нас</h1>
-<p>О нас</p>
+
+{% block text %}
+    {% for b in data %}
+        <img src="{{ b.abimg.url }}">
+    {% endfor %}
 {% endblock %}
+{% block table %}
+    <table>
+            <tbody><tr>
+                <th><strong>Год</strong></th>
+                <th><strong>Средняя зарплата</strong></th>
+                <th><strong>Средняя зарплата - Backend-программист</strong></th>
+                <th><strong>Количество вакансий</strong></th>
+                <th><strong>Количество вакансий - Backend-программист</strong></th>
+            </tr>
+            <tr>
+                <th>2003</th>
+                <th>41305</th>
+                <th>0</th>
+                <th>1070</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>2004</th>
+                <th>42968</th>
+                <th>0</th>
+                <th>4322</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>2005</th>
+                <th>375739</th>
+                <th>0</th>
+                <th>9364</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>2006</th>
+                <th>41318</th>
+                <th>0</th>
+                <th>23057</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>2007</th>
+                <th>44449</th>
+                <th>0</th>
+                <th>35341</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>2008</th>
+                <th>48411</th>
+                <th>0</th>
+                <th>46657</th>
+                <th>0</th>
+            </tr>
+            <tr>
+                <th>2009</th>
+                <th>44812</th>
+                <th>55437</th>
+                <th>31081</th>
+                <th>3</th>
+            </tr>
+            <tr>
+                <th>2010</th>
+                <th>44658</th>
+                <th>63605</th>
+                <th>51686</th>
+                <th>7</th>
+            </tr>
+            <tr>
+                <th>2011</th>
+                <th>46449</th>
+                <th>87038</th>
+                <th>77413</th>
+                <th>5</th>
+            </tr>
+            <tr>
+                <th>2012</th>
+                <th>47967</th>
+                <th>73745</th>
+                <th>95137</th>
+                <th>38</th>
+            </tr>
+            <tr>
+                <th>2013</th>
+                <th>53548</th>
+                <th>65878</th>
+                <th>129438</th>
+                <th>87</th>
+            </tr>
+            <tr>
+                <th>2014</th>
+                <th>49078</th>
+                <th>76728</th>
+                <th>141439</th>
+                <th>131</th>
+            </tr>
+            <tr>
+                <th>2015</th>
+                <th>51739</th>
+                <th>89082</th>
+                <th>147608</th>
+                <th>339</th>
+            </tr>
+            <tr>
+                <th>2016</th>
+                <th>61331</th>
+                <th>97302</th>
+                <th>174867</th>
+                <th>618</th>
+            </tr>
+            <tr>
+                <th>2017</th>
+                <th>60394</th>
+                <th>102744</th>
+                <th>197789</th>
+                <th>1201</th>
+            </tr>
+            <tr>
+                <th>2018</th>
+                <th>65679</th>
+                <th>118107</th>
+                <th>275888</th>
+                <th>2003</th>
+            </tr>
+            <tr>
+                <th>2019</th>
+                <th>70065</th>
+                <th>125709</th>
+                <th>259122</th>
+                <th>2449</th>
+            </tr>
+            <tr>
+                <th>2020</th>
+                <th>72985</th>
+                <th>128633</th>
+                <th>229873</th>
+                <th>2689</th>
+            </tr>
+            <tr>
+                <th>2021</th>
+                <th>83193</th>
+                <th>153897</th>
+                <th>134327</th>
+                <th>1875</th>
+            </tr>
+            <tr>
+                <th>2022</th>
+                <th>95673</th>
+                <th>179042</th>
+                <th>46383</th>
+                <th>579</th>
+            </tr>
+        </tbody></table>
+{% endblock %}}
 

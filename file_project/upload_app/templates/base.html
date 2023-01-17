@@ -8,8 +8,26 @@
          li {
             margin-bottom: 1.3em; /* Расстояние снизу */
            }
+         #content{
+            margin: 0 auto;
+            width:1000px;
+            /*height:600px;*/
+            /*position: absolute;*/
+            left:650px;
+            top:100px;
+            padding-bottom: 50px;
+            }
+         #content_table{
+            width:1000px;
+            /*height:600px;*/
+            position: absolute;
+            left:650px;
+            top:100px;
+            margin-top: 100px;
+            padding-bottom: 100px;
+            }
         #header{
-            width:100%;
+            width:10%;
             height:60px;
             position:center;
             left:0px;
@@ -26,13 +44,7 @@
             width: 190px;
             height: 300px;
         }
-       #content{
-            width:1000px;
-            height:600px;
-            position:absolute;
-            left:650px;
-            top:200px;
-            }
+
        #footer {
         position: fixed; /* Фиксированное положение */
         left: 0; bottom: 0; /* Левый нижний угол */
@@ -41,6 +53,27 @@
         color: #fff; /* Цвет текста */
         width: 100%; /* Ширина слоя */
        }
+
+    .table {
+        margin-left: 700px;
+    /*margin: 0 auto;*/
+	width: 1000px;
+	margin-bottom: 100px;
+    margin-top: 0px;
+	border-collapse: collapse;
+    }
+
+    .table th {
+        font-weight: bold;
+        padding: 5px;
+        background: #efefef;
+        border: 1px solid #dddddd;
+    }
+    .table td {
+        border: 1px solid #dddddd;
+        padding: 5px;
+    }
+
 
     </style>
 </head>
@@ -52,7 +85,9 @@
             <span class="fs-4">Питончик</span>
           </a>
     </div>
-    <div id="header"><h1>{% block content%}{% endblock %}</h1></div>
+    <div class="content-title">
+        {% block content%}{% endblock %}
+    </div>
     <div id="menuu">
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <ul>
@@ -64,10 +99,19 @@
             </ul>
         </nav>
     </div>
+<div>
     <div id="content">
-        iOS-разработчик, или iOS developer, — это программист, который пишет сервисы и программы для айфонов. Из-за особенностей устройств Apple и их операционной системы для них нужно писать специальный код. Основной язык, на котором пишут код iOS-разработчики, — Swift
-    </div>
+       {% block text %}{% endblock %}
+   </div>
+    <div class="table">
 
-    <div id="footer">Тут маи сикрит данные</div>
+             <section class="content">
+            {% block table %}
+            {% endblock table %}
+        </section>
+
+    </div>
+</div>
+    <div id="footer">Трофимов Никита Вадимович РИ-210950</div>
 </body>
 </html>

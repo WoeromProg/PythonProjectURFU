@@ -1,4 +1,11 @@
-{% for b in data %}
-<a href="{{ b.book.url }}">{{ b.title }}</a>
-<img src="{{ b.cover.url }}">
-{% endfor %}
+{% extends 'base.html' %}
+{% block content %}
+    <h1 class="center">География</h1>
+{% endblock %}
+
+{% block text %}
+    {% for b in data %}
+    <a href="{{ b.book.url }}"></a>
+    <img src="{{ b.cover.url }}">
+    {% endfor %}
+{% endblock %}}

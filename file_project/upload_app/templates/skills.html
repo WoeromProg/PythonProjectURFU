@@ -2,9 +2,42 @@
 {% block title %}
 Навыки
 {% endblock %}
-
 {% block content %}
 <h1>Навыки</h1>
-<p>Навыки</p>
+{% endblock %}
+{% block table %}
+
+<div class="inserted">
+        <div class="inserted-content">
+            <div class="skill-wrapper">
+                {% for year, skills in data.items %}
+                    <div class="skill">
+                        <div class="inserted-title">
+                            {{ year }}
+                        </div>
+                        <div class="small">
+                            <table>
+                                <thead class="thead">
+                                    <tr>
+                                        <th>Навык</th>
+                                        <th>Количество упоминаний</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    {% for skill in skills %}
+                                        <tr>
+                                            <th>{{ skill.name }}</th>
+                                            <th>{{ skill.count }}</th>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
 {% endblock %}
 

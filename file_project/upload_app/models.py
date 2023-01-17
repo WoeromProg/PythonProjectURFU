@@ -9,3 +9,28 @@ class Book(models.Model):
 
     def __str__(self):
         return self.title
+
+class DS(models.Model):
+    title = models.CharField(max_length=150)
+    dsimg = models.ImageField(upload_to='imgDS/')
+    book = models.FileField(upload_to='filles/')
+
+    def __str__(self):
+        return self.title
+
+class AB(models.Model):
+    title = models.CharField(max_length=150)
+    abimg = models.ImageField(upload_to='imgDS/')
+    book = models.FileField(upload_to='filles/')
+
+    def __str__(self):
+        return self.title
+
+class Skill(models.Model):
+
+    name = models.CharField(max_length=30)
+    year = models.IntegerField()
+    count = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.year}/{self.name}"
