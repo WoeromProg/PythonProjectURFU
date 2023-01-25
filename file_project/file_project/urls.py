@@ -25,7 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home_page', views.home_page, name='home_page'),
     path('skills', views.skills, name='skills'),
-    # path('skills', views.SkillsView.as_view(), name='skills'),
     path('last_vacancies', views.last_vacancies, name='last_vacancies')
 ]
 
