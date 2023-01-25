@@ -13,20 +13,9 @@ def about(request):
     abdata = AB.objects.all()
     return render(request, 'about.html', {'data': abdata})
 
-class SkillsView(TemplateView):
-
-    template_name = 'skills.html'
-
-    def get_context_data(self, **kwargs):
-        years = Skill.objects.values('year').distinct().order_by('year')
-        ctx = {}
-
-        for y in years:
-            ctx[y['year']] = Skill.objects.filter(year=y['year']).order_by('-count')
-
-        return {'data': ctx}
-#def skills(request):
-    #return render(request, 'skills.html')
+def skills(request):
+    skilldata = Skill.objects.all()
+    return render(request, 'skills.html', {'data': skilldata})
 
 def last_vacancies(request):
     return render(request, 'last_vacancies.html')

@@ -27,10 +27,6 @@ class AB(models.Model):
         return self.title
 
 class Skill(models.Model):
-
-    name = models.CharField(max_length=30)
-    year = models.IntegerField()
-    count = models.IntegerField()
-
-    def __str__(self):
-        return f"{self.year}/{self.name}"
+    title = models.CharField(max_length=150)
+    skillimg = models.ImageField(upload_to='imagesSkill/')
+    book = models.FileField(upload_to='fileSkill/')
